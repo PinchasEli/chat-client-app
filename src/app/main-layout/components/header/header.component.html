@@ -1,0 +1,27 @@
+<div class="header flex-col">
+    <h1>Keter Chat</h1>
+    <div class="user">
+        <div *ngIf="user" class="flex-row">
+            <span>Hello {{user.username}}</span>
+            <button (click)="logout()">Logout</button>
+        </div>
+        
+        <div *ngIf="!user" class="flex-row">
+            <span>Hello, please Login</span>
+            <button (click)="login()">Login</button>
+        </div>
+    </div>
+
+
+    <div *ngIf="user">
+        <button (click)="newChat()">Start new chat</button>
+    </div>
+
+    <ul class="chat-list flex-col">
+        <li *ngFor="let chat of chatList"
+            [class.selected]="chat.id == chatSelected?.id"
+            (click)="selectChat(chat)">
+            <span>chat {{chat.id}}</span>
+        </li>
+    </ul>
+</div>
