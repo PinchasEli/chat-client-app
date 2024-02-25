@@ -1,0 +1,18 @@
+<div class="chat flex-col">
+    <h2>Chat: {{chat?.id}}</h2>
+    <div class="message-content flex-col">
+        <message *ngFor="let msg of messageList"
+            [message]="msg"></message>
+    </div>
+
+    <div class="form">
+        <form [formGroup]="form" (ngSubmit)="send()">
+            <div>
+                <label>Please ask:</label>
+                <input type="text" formControlName="question">
+            </div>
+            <button *ngIf="!waitMessage" type="submit">Send</button>
+            <span *ngIf="waitMessage">{{waitMessage}}</span>
+        </form>
+    </div>
+</div>

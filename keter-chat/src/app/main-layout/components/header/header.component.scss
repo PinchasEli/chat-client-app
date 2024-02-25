@@ -1,0 +1,36 @@
+.header {
+    width: 20vw;
+    height: 100vh;
+    padding: 10px 20px;
+    gap: 10px;
+    background-color: dimgrey;
+
+    .user {
+        div {
+            width: 80%;
+            justify-content: space-around;
+        }
+    }
+
+    .chat-list {
+        width: 80%;
+        list-style-type:none;
+
+        li {
+            width: 100%;
+            gap: 5px;
+            margin-bottom: 5px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: 1px solid;
+            
+            &.selected {
+                background-color: aliceblue;
+            }
+
+            :hover {
+                background-color: aliceblue;
+            }
+        }
+    }
+}

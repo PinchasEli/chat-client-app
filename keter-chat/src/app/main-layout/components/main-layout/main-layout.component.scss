@@ -1,0 +1,9 @@
+.main-layout {
+    width: 99vw;
+    height: 98vh;
+    background-color: antiquewhite;
+
+    .content {
+        flex-grow: 1;
+    }
+}
